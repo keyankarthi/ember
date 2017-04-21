@@ -1,0 +1,23 @@
+<form {{action "addQuery" on ="submit"}}>
+  Enter {{input value=queryParam}}
+  <input type="submit" value="Send Value"/>
+  {{queryParam}}
+</form>
+<br>
+<h2>List of Players</h2>
+<ul>
+   {{#each model as |player|}}
+    <li>{{player}}</li>
+   {{/each}}
+</ul>
+
+
+{{ui-slider
+  ticks='0,100,200,150,400'
+  ticksLabels='$0,$100,$200,$300,$400'
+  ticksSnapBounds=15
+  tooltip='hide'
+  min=0
+  max=400 }}
+
+
